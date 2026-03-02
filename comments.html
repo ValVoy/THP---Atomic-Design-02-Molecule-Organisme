@@ -1,18 +1,17 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css">
-<div class="container mt-5">
-  <h3>Comment Section</h3>
-  <div class="comment-box shadow-sm p-3 bg-white rounded">
-    <strong>Jean-Pierre :</strong>
-    <p>Super événement, j'ai adoré !</p>
-    <small class="text-muted">Posted on March 2, 2026</small>
-  </div>
-  <textarea class="form-control mb-2" placeholder="Add a comment..."></textarea>
-  <button class="btn btn-success">Comment</button>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<div class="container mt-5 col-md-8">
+    <h3>Section de commentaires</h3>
+    <div class="mb-4">
+        <textarea class="form-control" rows="3" placeholder="Laissez un commentaire..."></textarea>
+        <button class="btn btn-success mt-2">Publier</button>
+    </div>
+    <div class="comment-molecule">
+        <div class="d-flex justify-content-between">
+            <strong>Jean Martin</strong>
+            <small class="text-muted">Il y a 2h</small>
+        </div>
+        <p class="mt-2">Super organisation, j'ai hâte de revenir !</p>
+    </div>
 </div>
-
-<div class="container mt-5 mb-5">
-    <hr>
-    <a href="index.html" class="btn btn-outline-secondary">
-        <i class="fas fa-arrow-left"></i> ← Back to Hub (Organisms List)
-    </a>
-</div>
+<a href="index.html" class="btn btn-secondary back-to-hub">← Hub</a>

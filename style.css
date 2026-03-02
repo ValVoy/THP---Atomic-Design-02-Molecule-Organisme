@@ -1,3 +1,28 @@
-/* Custom tweaks over Bootswatch */
-.hero-banner { background: #2c3e50; color: white; padding: 60px 0; }
-.comment-box { border-left: 3px solid #2ecc71; padding-left: 15px; margin-bottom: 20px; }
+/* Personnalisations au-dessus de Darkly */
+.hero-banner {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1400');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-event {
+    transition: transform 0.3s;
+    margin-bottom: 2rem;
+}
+
+.card-event:hover {
+    transform: translateY(-5px);
+}
+
+.comment-molecule {
+    border-bottom: 1px solid #444;
+    padding: 15px 0;
+}
+
+.back-to-hub {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
