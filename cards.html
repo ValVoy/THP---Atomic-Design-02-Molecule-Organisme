@@ -1,32 +1,72 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
-<div class="container mt-5">
-    <h3>Organisme : Liste d'événements (Page d'accueil)</h3>
-    <div class="row">
-        <div class="col-md-4 card-event">
-            <div class="card shadow">
-                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500" class="card-img-top">
-                <div class="card-body">
-                    <p class="text-primary mb-1">SAM. 14 MARS</p>
-                    <h5 class="card-title">Festival Tech 2026</h5>
-                    <p class="card-text text-muted">Paris, France</p>
-                    <button class="btn btn-sm btn-outline-info">S'inscrire</button>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Cartes & Listes - Eventbrite</title>
+</head>
+<body class="bg-dark text-light">
+
+    <div class="container py-5">
+        <h2 class="mb-5">2.2.5.2 Organisme : Liste d'événements (Grille Alignée)</h2>
+        
+        <div class="row">
+            
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500" class="card-img-top" alt="Event">
+                    <div class="card-body">
+                        <p class="text-primary mb-1">SAM. 14 MARS</p>
+                        <h5 class="card-title">Festival Tech 2026</h5>
+                        <p class="card-text text-muted">Un petit texte descriptif court.</p>
+                        <button class="btn btn-sm btn-primary">S'inscrire</button>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-primary">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=500" class="card-img-top" alt="Event">
+                    <div class="card-body">
+                        <p class="text-primary mb-1">DIM. 15 MARS</p>
+                        <h5 class="card-title">Conférence IA & Futur</h5>
+                        <p class="card-text text-muted">Ici, nous avons beaucoup plus de texte pour vérifier que la carte d'à côté s'étire bien pour faire la même taille que celle-ci, et que le bouton reste en bas.</p>
+                        <button class="btn btn-sm btn-primary">S'inscrire</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500" class="card-img-top" alt="Event">
+                    <div class="card-body">
+                        <p class="text-primary mb-1">LUN. 16 MARS</p>
+                        <h5 class="card-title">Soirée Networking</h5>
+                        <p class="card-text text-muted">Un texte de taille moyenne.</p>
+                        <button class="btn btn-sm btn-primary">S'inscrire</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-    <h3 class="mt-5">Molécule : Participant (Carte Horizontale)</h3>
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-            <div class="col-md-4"><img src="https://i.pravatar.cc/150?u=1" class="card-img"></div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Valentin D.</h5>
-                    <p class="card-text">Passionné de musique live.</p>
+        <h2 class="mt-5 mb-4">Molécule : Participant (Carte Horizontale)</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-flex shadow">
+                    <img src="https://i.pravatar.cc/150?u=valentin" class="card-img" alt="Avatar">
+                    <div class="card-body">
+                        <h5 class="card-title">Valentin D.</h5>
+                        <p class="card-text">Organisateur principal et passionné de design sombre.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<a href="index.html" class="btn btn-secondary back-to-hub">← Hub</a>
+
+    <a href="index.html" class="btn btn-secondary back-to-hub">← Retour au Hub</a>
+
+</body>
+</html>

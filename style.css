@@ -1,28 +1,112 @@
-/* Personnalisations au-dessus de Darkly */
-.hero-banner {
-    padding: 80px 0;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1400');
-    background-size: cover;
-    background-position: center;
+/* style.css - Projet 2 Valentin */
+
+/* 1. BASE SOMBRE & MISE EN PAGE */
+body {
+    background-color: #222 !important;
+    color: #ebebeb !important;
+    min-height: 100vh;
 }
 
-.card-event {
-    transition: transform 0.3s;
-    margin-bottom: 2rem;
+/* 2. ORGANISME : BANNER (JUMBOTRON & HERO) */
+.jumbotron, .hero-banner {
+    padding: 80px 2rem !important;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1400') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    border: 1px solid #444 !important;
+    border-radius: 15px !important;
+    color: #fff !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    margin-bottom: 2rem !important;
 }
 
-.card-event:hover {
-    transform: translateY(-5px);
+/* 3. CARTES & GRILLES (ALIGNEMENT TOTAL) */
+.row {
+    display: flex !important;
+    flex-wrap: wrap !important;
 }
 
+/* Force les colonnes à étirer les cartes */
+.col-md-4, .col-md-6, .col-lg-4, .col-lg-8 {
+    display: flex !important;
+}
+
+.card {
+    background-color: #303030 !important;
+    border: 1px solid #444 !important;
+    color: #fff !important;
+    width: 100% !important; 
+    height: 100% !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    margin-bottom: 0 !important; 
+}
+
+.card-img-top, .card-img {
+    height: 200px !important;
+    min-height: 200px !important;
+    object-fit: cover !important;
+}
+
+.col-lg-8 .card-img-top {
+    height: 100% !important;
+    min-height: 400px !important;
+}
+
+.card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    padding: 1.5rem !important;
+}
+
+.card-text {
+    flex-grow: 1 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.card-flex {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+.card-flex .card-img {
+    width: 150px !important;
+    height: 100% !important;
+    min-height: 150px !important;
+    object-fit: cover !important;
+}
+
+/* 4. MOLÉCULE : COMMENTAIRE */
 .comment-molecule {
     border-bottom: 1px solid #444;
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
+/* 5. BOUTONS & NAVIGATION */
 .back-to-hub {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+.mt-auto {
+    margin-top: auto !important;
+}
+
+.img-feature {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    border: 1px solid #444;
+}
+
+/* 6. CORRECTIF SPÉCIFIQUE PAGE ELEMENT (Pour ne pas casser les cards) */
+.feature-row > [class*='col-'] {
+    display: block !important; /* Désactive le flex qui écrase tout sur cette page */
 }
