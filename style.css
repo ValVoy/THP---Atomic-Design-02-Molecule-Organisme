@@ -1,13 +1,13 @@
-/* style.css - Projet 2 Valentin */
+/* style.css - Projet 2 Valentin (Version Finale Unifiée) */
 
-/* 1. BASE SOMBRE & MISE EN PAGE */
+/* 1. BASE SOMBRE */
 body {
     background-color: #222 !important;
     color: #ebebeb !important;
     min-height: 100vh;
 }
 
-/* 2. ORGANISME : BANNER (JUMBOTRON & HERO) */
+/* 2. BANNIÈRES */
 .jumbotron, .hero-banner {
     padding: 80px 2rem !important;
     background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
@@ -18,42 +18,40 @@ body {
     border-radius: 15px !important;
     color: #fff !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
-    margin-bottom: 2rem !important;
 }
 
-/* 3. CARTES & GRILLES (ALIGNEMENT TOTAL) */
+/* 3. ALIGNEMENT DES GRILLES */
 .row {
     display: flex !important;
     flex-wrap: wrap !important;
 }
 
-/* Force les colonnes à étirer les cartes */
-.col-md-4, .col-md-6, .col-lg-4, .col-lg-8 {
+.row > [class*='col-'] {
+    display: block !important; 
+}
+
+/* On force le flex UNIQUEMENT pour les grilles de cartes verticales */
+.row > [class*='col-']:has(.card) {
     display: flex !important;
 }
 
+/* 4. CARTES (MOLÉCULES) */
 .card {
     background-color: #303030 !important;
     border: 1px solid #444 !important;
     color: #fff !important;
-    width: 100% !important; 
-    height: 100% !important; 
+    width: 100% !important;
+    height: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     border-radius: 12px !important;
     overflow: hidden;
-    margin-bottom: 0 !important; 
 }
 
-.card-img-top, .card-img {
+.card-img-top {
     height: 200px !important;
-    min-height: 200px !important;
+    min-height: 200px !important; /* FIX: Empêche l'image de s'écraser */
     object-fit: cover !important;
-}
-
-.col-lg-8 .card-img-top {
-    height: 100% !important;
-    min-height: 400px !important;
 }
 
 .card-body {
@@ -68,26 +66,51 @@ body {
     margin-bottom: 1.5rem !important;
 }
 
+/* FIX: CARTE HORIZONTALE (Participant) */
 .card-flex {
     flex-direction: row !important;
     flex-wrap: nowrap !important;
 }
 
 .card-flex .card-img {
-    width: 150px !important;
-    height: 100% !important;
+    width: 150px !important; /* FIX: Largeur fixe pour l'avatar */
+    height: auto !important;
     min-height: 150px !important;
     object-fit: cover !important;
 }
 
-/* 4. MOLÉCULE : COMMENTAIRE */
-.comment-molecule {
-    border-bottom: 1px solid #444;
-    padding: 20px 0;
+/* FIX: PAGE RESSOURCE (Grande Image) */
+.col-lg-8 .card-img-top {
+    height: 100% !important;
+    min-height: 400px !important; /* FIX: Donne de la hauteur à l'image ressource */
 }
 
-/* 5. BOUTONS & NAVIGATION */
-.back-to-hub {
+/* 5. PRÉSENTATION D'ÉLÉMENT (FEATURES) */
+.img-feature {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    border: 1px solid #444;
+}
+
+/* 6. FOOTER */
+footer {
+    background-color: #161616 !important;
+    border-top: 1px solid #333;
+    padding: 80px 0 40px 0 !important;
+    margin-top: 100px;
+}
+
+footer h5 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* 7. UTILITAIRES */
+.back-to-hub, .back-to-hub-btn {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -96,17 +119,4 @@ body {
 
 .mt-auto {
     margin-top: auto !important;
-}
-
-.img-feature {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-    border: 1px solid #444;
-}
-
-/* 6. CORRECTIF SPÉCIFIQUE PAGE ELEMENT (Pour ne pas casser les cards) */
-.feature-row > [class*='col-'] {
-    display: block !important; /* Désactive le flex qui écrase tout sur cette page */
 }
