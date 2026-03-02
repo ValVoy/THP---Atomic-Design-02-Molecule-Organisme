@@ -2,21 +2,158 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventbrite UI Kit - Dashboard Valentin</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
-    <title>Hub Organismes - Eventbrite Dark</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="container py-5">
-    <h1 class="mb-4">🚀 Hub des Molécules & Organismes</h1>
-    <div class="list-group">
-        <a href="navbar.html" class="list-group-item list-group-item-action">🧭 2.2.1 La Navbar</a>
-        <a href="footer.html" class="list-group-item list-group-item-action">👣 2.2.2 Le Footer</a>
-        <a href="authentification_form.html" class="list-group-item list-group-item-action">🔑 2.2.3 Formulaires d'Authentification</a>
-        <a href="banner.html" class="list-group-item list-group-item-action">🖼️ 2.2.4 Les Bannières</a>
-        <a href="cards.html" class="list-group-item list-group-item-action">🃏 2.2.5 Cartes & Listes d'événements</a>
-        <a href="comments.html" class="list-group-item list-group-item-action">💬 2.2.6 Section Commentaires</a>
-        <a href="presentation_ressource.html" class="list-group-item list-group-item-action">📄 2.2.7 Présentation Ressource (Show)</a>
-        <a href="element_presentation.html" class="list-group-item list-group-item-action">🌓 2.2.8 Présentation d'un élément</a>
-        <a href="pricing.html" class="list-group-item list-group-item-action">💰 2.2.9 Organisme au choix : Tarifs</a>
-    </div>
+<body class="bg-dark text-light">
+
+    <header class="jumbotron jumbotron-fluid shadow-lg mb-5">
+        <div class="container text-center">
+            <h1 class="display-3 font-weight-bold">🚀 Eventbrite UI Kit</h1>
+            <p class="lead">Exploration des molécules et organismes pour le projet final.</p>
+            <div class="mt-4">
+                <span class="badge badge-pill badge-primary p-2 px-3">Bootstrap 4</span>
+                <span class="badge badge-pill badge-success p-2 px-3">Bootswatch Darkly</span>
+                <span class="badge badge-pill badge-info p-2 px-3">Atomic Design</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        <div class="row">
+            
+            <div class="col-12 mt-4 mb-3">
+                <h2 class="h4 border-bottom border-secondary pb-2"><i class="fas fa-layer-group mr-2"></i> Fondations & Navigation</h2>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-info">
+                    <div class="card-body text-center d-flex flex-column">
+                        <i class="fas fa-compass fa-3x text-info mb-3"></i>
+                        <h5 class="card-title">Barre de Navigation</h5>
+                        <p class="card-text text-muted small">L'organisme Navbar adapté pour naviguer dans Eventbrite.</p>
+                        <a href="navbar.html" class="btn btn-outline-info mt-auto">Voir l'organisme</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-info">
+                    <div class="card-body text-center d-flex flex-column">
+                        <i class="fas fa-shoe-prints fa-3x text-info mb-3"></i>
+                        <h5 class="card-title">Le Footer</h5>
+                        <p class="card-text text-muted small">Design du bas de page avec liens et réseaux sociaux.</p>
+                        <a href="footer.html" class="btn btn-outline-info mt-auto">Voir l'organisme</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4 mb-3">
+                <h2 class="h4 border-bottom border-secondary pb-2"><i class="fas fa-user-lock mr-2"></i> Utilisateurs & Sécurité</h2>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-warning">
+                    <div class="card-body d-flex align-items-center">
+                        <i class="fas fa-key fa-3x text-warning mr-4"></i>
+                        <div class="flex-grow-1">
+                            <h5 class="mb-1">Authentification</h5>
+                            <p class="text-muted small mb-2">Formulaires génériques : Connexion, Inscription, Reset.</p>
+                            <a href="authentification_form.html" class="btn btn-sm btn-warning">Explorer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-warning">
+                    <div class="card-body d-flex align-items-center">
+                        <i class="fas fa-comments fa-3x text-warning mr-4"></i>
+                        <div class="flex-grow-1">
+                            <h5 class="mb-1">Commentaires</h5>
+                            <p class="text-muted small mb-2">Molécule de post et organisme de section complète.</p>
+                            <a href="comments.html" class="btn btn-sm btn-warning">Explorer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4 mb-3">
+                <h2 class="h4 border-bottom border-secondary pb-2"><i class="fas fa-calendar-star mr-2"></i> Cœur de l'application</h2>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-success">
+                    <div class="card-body text-center d-flex flex-column">
+                        <i class="fas fa-image fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Bannières</h5>
+                        <p class="card-text text-muted small">Design pour la Home et les pages secondaires.</p>
+                        <a href="banner.html" class="btn btn-outline-success mt-auto">Accéder</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-success">
+                    <div class="card-body text-center d-flex flex-column">
+                        <i class="fas fa-th-large fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Cartes & Grilles</h5>
+                        <p class="card-text text-muted small">La liste des événements et des participants.</p>
+                        <a href="cards.html" class="btn btn-outline-success mt-auto">Accéder</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-success">
+                    <div class="card-body text-center d-flex flex-column">
+                        <i class="fas fa-file-invoice fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Ressource (Show)</h5>
+                        <p class="card-text text-muted small">Mise en page complète de la page événement.</p>
+                        <a href="presentation_ressource.html" class="btn btn-outline-success mt-auto">Accéder</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4 mb-3">
+                <h2 class="h4 border-bottom border-secondary pb-2"><i class="fas fa-rocket mr-2"></i> Marketing & Bonus</h2>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-primary">
+                    <div class="card-body d-flex align-items-center">
+                        <i class="fas fa-columns fa-3x text-primary mr-4"></i>
+                        <div class="flex-grow-1">
+                            <h5 class="mb-1">Présentation Éléments</h5>
+                            <p class="text-muted small mb-2">Alternance texte/image pour le marketing.</p>
+                            <a href="element_presentation.html" class="btn btn-sm btn-primary">Voir les sections</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-primary">
+                    <div class="card-body d-flex align-items-center">
+                        <i class="fas fa-tags fa-3x text-primary mr-4"></i>
+                        <div class="flex-grow-1">
+                            <h5 class="mb-1">Tarification (Extra)</h5>
+                            <p class="text-muted small mb-2">Organisme de choix : Les grilles tarifaires.</p>
+                            <a href="pricing.html" class="btn btn-sm btn-primary">Voir les prix</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-4 bg-darker border-top border-secondary mt-5">
+        <p class="mb-0">Valentin THP &copy; 2026 - Atomic Design Project</p>
+    </footer>
+
 </body>
 </html>
